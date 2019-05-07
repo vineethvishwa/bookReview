@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+<h1 class="center">Sign In</h1>
+<p class="center yellow">{{ message }}</p>
+<section class="container row">
+<form action="{{url_for('search')}}" method="post" class="col s12">
+{% include "authenticate.html" %}{% endblock %}
+</form>
+</section>

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block navitems %}
+<li><a>Hi,{{ name }}</a></li>
+<li><a href="{{url_for('logout')}}">Log Out</a></li>
+{% endblock %}
+
+{% block content %}
+<form action="{{url_for('results')}}" method="post">
+<div class="input-field">
+<input type="text" name="isbn" id="isbn">
+<label for="isbn">ISBN</label>
+</div>
+<div class="input-field">
+<input type="text" name="title" id="title">
+<label for="title">Book Title</label>
+</div>
+<div class="input-field">
+<input type="text" name="author" id="author">
+<label for="author">Author</label>
+</div>
+<button class="btn btn-large waves-effect waves-light" type="submit">
+<i class="material-icons right">search</i>
+</button>
+</form>
+{% endblock %}

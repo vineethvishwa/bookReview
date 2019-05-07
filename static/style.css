@@ -1,0 +1,38 @@
+body {
+display: flex;
+min-height: 100vh;
+background: #CBBB98;
+margin: 0;
+padding : 0;
+flex-direction: column;
+}
+main{
+flex: 1 0 auto;
+}
+.big {
+font-size: 24px;
+}
+#rating {
+display: block;
+}
+textarea{
+white-space: pre-wrap;
+}
+#head{
+	width : 960px;
+	height : auto;
+	background:#DAD5C1;
+	border-left :5px solid #A09885; 
+	border-right :5px solid #A09885;
+	overflow: auto;
+	margin : 0 auto;
+	padding : 5px;  
+}
+.center{
+	text-align: center;
+
+}
+.center yellow{
+	text-align: center;
+	background-color: yellow;
+}

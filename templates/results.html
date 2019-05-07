@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block navitems %}
+<li><a href="{{url_for('search')}}">Dashboard</a></li>
+<li><a href="{{url_for('logout')}}">Log Out</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="row center">
+{% for id,isbn,title,author,year in books %}
+<div class="col s12 m5 offset-m1">
+<div class="card blue-grey darken-1">
+<div class="card-content white-text">
+<span class="card-title">{{title}}</span>
+<p>Authored by {{author}} in {{year}}. ISBN {{isbn}}</p>
+</div>
+<div class="card-action">
+<a href="/book/{{id}}">More info</a>
+</div>
+</div>
+</div>
+{% else %}
+<h1 class="center">No such book found !</h1>
+{% endfor %}
+</div>
+
+</ul>
+{% endblock %}
